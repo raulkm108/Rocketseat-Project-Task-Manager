@@ -17,6 +17,11 @@ def see_tasks(tasks):
     if not tasks:
         print("No tasks avaiable")
 
+def update_tasks(tasks):
+    print("Which task would you like to change? ")
+    for task in tasks:
+        print(f"{task["Task"]}")
+
 tasks = []
 
 
@@ -36,6 +41,8 @@ while True:
         add_task(task_name, tasks)
     elif choice == "2":
         see_tasks(tasks)
+    elif choice == "3":
+        update_tasks(tasks)
     elif choice == "6":
         break
 
