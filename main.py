@@ -58,10 +58,14 @@ def complete_tasks(tasks):
     choice = int(input("\nWhich task would you like to complete? "))
     while choice < 1 or choice > len(tasks):
         choice = int(input("Insert a valid number: "))
-    tasks[choice - 1]["Completed"] = True 
-    Task = tasks[choice - 1]["Task"]
+    adjusted_index = choice - 1
 
-    print(f"\nThe task \"{Task}\" is now completed")
+    if tasks[adjusted_index]["Completed"] == False:
+        tasks[adjusted_index]["Completed"] = True 
+        Task = tasks[adjusted_index]["Task"]
+        print(f"\nThe task \"{Task}\" is now completed")
+    else:
+        print("\nThis task is already checked")
 
 def remove_tasks(tasks):
     if not tasks:
