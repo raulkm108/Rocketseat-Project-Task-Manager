@@ -79,6 +79,8 @@ def remove_tasks(tasks):
     
     print(f"\nThe task \"{removed_task["Task"]}\" has been removed")
 
+def remove_completed_tasks(tasks):
+    
 tasks = []
 
 
@@ -88,8 +90,9 @@ while True:
     print("2. See tasks")
     print("3. Update task")
     print("4. Complete task")
-    print("5. Delete completed tasks")
-    print("6. Leave")
+    print("5. Delete specific task")
+    print("6. Delete all completed tasks")
+    print("7. Leave")
 
     choice = input("Type your choice: ")
 
@@ -106,6 +109,8 @@ while True:
         see_tasks(tasks)
         remove_tasks(tasks)
     elif choice == "6":
+
+    elif choice == "7":
         break
 
 print("Program Finished")
