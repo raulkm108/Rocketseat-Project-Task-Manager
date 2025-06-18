@@ -28,6 +28,8 @@ def update_tasks(tasks):
         print("\nNo tasks available to change")
         return
     choice = int(input("Which task would you like to change? "))
+    # It's worth remembering that the program breaks if the input is not an intereger, if it has a "." and if it is an integer
+    # Gonna solve it later
     while choice < 1 or choice > len(tasks):
         choice = int(input("Insert a valid number: "))
         
