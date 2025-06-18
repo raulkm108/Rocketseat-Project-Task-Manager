@@ -1,8 +1,15 @@
 def add_task(task_name, tasks):
     task = {"Task": task_name, "Completed": False}
     tasks.append(task)
-    print(f"Task {task_name} was successfully added")
+    print(f"Task \"{task_name}\" was successfully added")
     return
+
+def see_tasks(tasks):
+    print()
+    for task in tasks:
+        print(f"{task["Task"]}")
+    if not tasks:
+        print("\nNo tasks avaiable")
 
 tasks = []
 
@@ -19,10 +26,11 @@ while True:
     choice = input("Type your choice: ")
 
     if choice == "1":
-        task_name = input("Task name you want to add: ")
+        task_name = input("Name the task you want to add: ")
         add_task(task_name, tasks)
-
-    if choice == "6":
+    elif choice == "2":
+        see_tasks(tasks)
+    elif choice == "6":
         break
 
 print("Program Finished")
