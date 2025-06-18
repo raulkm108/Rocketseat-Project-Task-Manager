@@ -62,6 +62,11 @@ def complete_tasks(tasks):
 
     print(f"\nThe task \"{Task}\" is now completed")
 
+def remove_tasks(tasks):
+    choice = int(input("\m Which task do you want to remove?"))
+    adjusted_index = choice - 1
+    tasks.remove(tasks[adjusted_index])
+    
 tasks = []
 
 
@@ -86,7 +91,8 @@ while True:
     elif choice == "4":
         complete_tasks(tasks)
     elif choice == "5":
-        remove_task(tasks)
+        see_tasks(tasks)
+        remove_tasks(tasks)
     elif choice == "6":
         break
 
