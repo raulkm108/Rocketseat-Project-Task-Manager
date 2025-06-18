@@ -15,16 +15,17 @@ def see_tasks(tasks):
         print(f"{counter}. [{status}] {task["Task"]}")
         counter += 1
     if not tasks:
-        print("No tasks avaiable")
+        print("No tasks available")
     return
 
 def update_tasks(tasks):
     counter = 1
+    print()
     for task in tasks:
         print(f"{counter}. {task["Task"]}")
         counter += 1
     if not tasks:
-        print("\nNo tasks avaiable to change")
+        print("\nNo tasks available to change")
         return
     choice = int(input("Which task would you like to change? "))
     while choice < 1 or choice > len(tasks):
