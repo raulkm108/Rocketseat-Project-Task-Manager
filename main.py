@@ -58,6 +58,9 @@ def complete_tasks(tasks):
     while choice < 1 or choice > len(tasks):
         choice = int(input("Insert a valid number: "))
     tasks[choice - 1]["Completed"] = True 
+    Task = tasks[choice - 1]["Task"]
+
+    print(f"\nThe task \"{Task}\" is now completed")
 
 tasks = []
 
