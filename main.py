@@ -6,12 +6,14 @@ def add_task(task_name, tasks):
 
 def see_tasks(tasks):
     print("\nTask List:")
+    counter = 1
     for task in tasks:
         if task["Completed"]:
             status = "✓"
         else:
             status = " "
-        print(f"[{status}] {task["Task"]}")
+        print(f"{counter}. [{status}] {task["Task"]}")
+        counter += 1
     if not tasks:
         print("No tasks avaiable")
 
