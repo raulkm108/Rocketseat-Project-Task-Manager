@@ -1,3 +1,12 @@
+def add_task(task_name, tasks):
+    task = {"Task": task_name, "Completed": False}
+    tasks.append(task)
+    print(f"Task {task_name} was successfully added")
+    return
+
+tasks = []
+
+
 while True:
     print("\nTask manager menu:")
     print("1. Add task")
