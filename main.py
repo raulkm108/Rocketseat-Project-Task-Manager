@@ -25,7 +25,7 @@ def update_tasks(tasks):
     if not tasks:
         print("No tasks avaiable to change")
     choice = int(input("Which task would you like to change? "))
-    while choice < 1:
+    while choice < 1 and choice >= len(tasks):
         choice = int(input("Insert a valid number: "))
         
     new_task = input("Type the new task: ")
