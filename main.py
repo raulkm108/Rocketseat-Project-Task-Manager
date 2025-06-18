@@ -5,11 +5,11 @@ def add_task(task_name, tasks):
     return
 
 def see_tasks(tasks):
-    print()
+    print("\nTask List:")
     for task in tasks:
         print(f"{task["Task"]}")
     if not tasks:
-        print("\nNo tasks avaiable")
+        print("No tasks avaiable")
 
 tasks = []
 
