@@ -59,6 +59,8 @@ while True:
         see_tasks(tasks)
     elif choice == "3":
         update_tasks(tasks)
+    elif choice == "4":
+        complete_task(tasks)
     elif choice == "6":
         break
 
