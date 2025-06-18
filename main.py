@@ -73,7 +73,7 @@ def remove_tasks(tasks):
     removed_task = tasks[adjusted_index]
     tasks.remove(tasks[adjusted_index])
     
-    print(f"The task \"{removed_task["Task"]}\" has been removed")
+    print(f"\nThe task \"{removed_task["Task"]}\" has been removed")
 
 tasks = []
 
