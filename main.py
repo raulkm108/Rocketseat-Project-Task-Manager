@@ -41,9 +41,23 @@ def update_tasks(tasks):
 
     return
 
-#def complete_tasks(tasks):
+def complete_tasks(tasks):
+    counter = 1
+    for task in tasks:
+        if task["Completed"]:
+            status = "✓"
+        else:
+            status = " "
+        print(f"{counter}. [{status}] {task["Task"]}")
+        counter += 1
+    if not tasks:
+        print("No tasks available")
+        return
     
-
+    choice = int(input("\nWhich task would you like to complete? "))
+    while choice < 1 or choice > len(tasks):
+        choice = int(input("Insert a valid number: "))
+    tasks[choice - 1]["Completed"] = True 
 
 tasks = []
 
@@ -66,8 +80,8 @@ while True:
         see_tasks(tasks)
     elif choice == "3":
         update_tasks(tasks)
-    #elif choice == "4":
-     #   complete_task(tasks)
+    elif choice == "4":
+        complete_tasks(tasks)
     elif choice == "6":
         break
 
