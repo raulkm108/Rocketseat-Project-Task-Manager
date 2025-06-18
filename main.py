@@ -7,7 +7,11 @@ def add_task(task_name, tasks):
 def see_tasks(tasks):
     print("\nTask List:")
     for task in tasks:
-        print(f"{task["Task"]}")
+        if task["Completed"]:
+            status = "✓"
+        else:
+            status = " "
+        print(f"[{status}] {task["Task"]}")
     if not tasks:
         print("No tasks avaiable")
 
