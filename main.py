@@ -18,6 +18,10 @@ while True:
 
     choice = input("Type your choice: ")
 
+    if choice == 1:
+        task_name = input("Task name you want to add: ")
+        add_task(task_name, tasks)
+
     if choice == "6":
         break
 
