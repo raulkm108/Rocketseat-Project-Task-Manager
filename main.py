@@ -85,6 +85,8 @@ while True:
         update_tasks(tasks)
     elif choice == "4":
         complete_tasks(tasks)
+    elif choice == "5":
+        remove_task(tasks)
     elif choice == "6":
         break
 
