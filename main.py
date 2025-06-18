@@ -16,6 +16,7 @@ def see_tasks(tasks):
         counter += 1
     if not tasks:
         print("No tasks available")
+        return
     return
 
 def update_tasks(tasks):
@@ -63,7 +64,9 @@ def complete_tasks(tasks):
     print(f"\nThe task \"{Task}\" is now completed")
 
 def remove_tasks(tasks):
-    choice = int(input("\n Which task do you want to remove? "))
+    if not tasks:
+        return
+    choice = int(input("\nWhich task do you want to remove? "))
     while choice < 1 or choice > len(tasks):
         choice = int(input("Insert a valid number: "))
     adjusted_index = choice - 1
