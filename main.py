@@ -18,9 +18,16 @@ def see_tasks(tasks):
         print("No tasks avaiable")
 
 def update_tasks(tasks):
-    print("Which task would you like to change? ")
+    counter = 1
     for task in tasks:
-        print(f"{task["Task"]}")
+        print(f"{counter}. {task["Task"]}")
+        counter += 1
+    if not tasks:
+        print("No tasks avaiable to change")
+    choice = int(input("Which task would you like to change? "))
+    new_task = input("Type the new task: ")
+
+    tasks[choice]["Task"] = new_task
 
 tasks = []
 
