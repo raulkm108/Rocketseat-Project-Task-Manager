@@ -16,6 +16,7 @@ def see_tasks(tasks):
         counter += 1
     if not tasks:
         print("No tasks avaiable")
+    return
 
 def update_tasks(tasks):
     counter = 1
@@ -24,13 +25,15 @@ def update_tasks(tasks):
         counter += 1
     if not tasks:
         print("\nNo tasks avaiable to change")
+        return
     choice = int(input("Which task would you like to change? "))
     while choice < 1 or choice > len(tasks):
         choice = int(input("Insert a valid number: "))
         
     new_task = input("Type the new task: ")
-
     tasks[choice - 1]["Task"] = new_task
+
+    return
 
 tasks = []
 
