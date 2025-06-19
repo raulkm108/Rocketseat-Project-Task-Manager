@@ -80,6 +80,11 @@ def remove_tasks(tasks):
     print(f"\nThe task \"{removed_task["Task"]}\" has been removed")
 
 def remove_completed_tasks(tasks):
+    for task in tasks:
+        if task["Completed"] == True:
+            task.remove(task)
+        if not tasks:
+            print("No tasks Available to remove")
     
 tasks = []
 
@@ -109,7 +114,7 @@ while True:
         see_tasks(tasks)
         remove_tasks(tasks)
     elif choice == "6":
-
+        remove_completed_tasks(tasks)
     elif choice == "7":
         break
 
