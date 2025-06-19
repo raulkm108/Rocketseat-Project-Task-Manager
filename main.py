@@ -39,7 +39,6 @@ def update_tasks(tasks):
     tasks[choice - 1]["Task"] = new_task
 
     print(f"\nThe task \"{old_task}\" was replaced for \"{new_task}\"")
-
     return
 
 def complete_tasks(tasks):
@@ -66,6 +65,7 @@ def complete_tasks(tasks):
         print(f"\nThe task \"{Task}\" is now completed")
     else:
         print("\nThis task is already checked")
+    return
 
 def remove_tasks(tasks):
     if not tasks:
@@ -78,6 +78,7 @@ def remove_tasks(tasks):
     tasks.remove(tasks[adjusted_index])
     
     print(f"\nThe task \"{removed_task["Task"]}\" has been removed")
+    return
 
 def remove_completed_tasks(tasks):
     for task in tasks:
