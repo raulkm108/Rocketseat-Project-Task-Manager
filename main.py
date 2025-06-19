@@ -81,7 +81,10 @@ def remove_tasks(tasks):
     return
 
 def remove_completed_tasks(tasks):
+    tasks2 = []
     for task in tasks:
+        tasks2.append(task)
+    for task in tasks2:
         if task["Completed"] == True:
             tasks.remove(task)
     if not tasks:
