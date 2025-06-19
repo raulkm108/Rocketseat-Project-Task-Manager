@@ -87,7 +87,7 @@ def remove_completed_tasks(tasks):
             tasks2.append(task)
     if not tasks:
             print("\nNo tasks Available to remove")
-            return
+            return tasks2 
     
     print("\nAll completed tasks were removed successfully")
     return tasks2
